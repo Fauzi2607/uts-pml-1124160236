@@ -33,6 +33,58 @@ class ProfilPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Profil Mahasiswa'),
+        centerTitle: true,
+
+        actions: [
+          IconButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Halaman pengaturan profil')),
+              );
+            },
+            icon: const Icon(Icons.settings),
+          ),
+        ],
+      ),
+
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundColor: Colors.deepPurple,
+                  child: Icon(Icons.person, size: 70, color: Colors.white),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  'Mohamad Fauzi',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                SizedBox(height: 5),
+                Text(
+                  '1124160236',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                SizedBox(height: 5),
+                Text(
+                  'Teknik Informatika',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
