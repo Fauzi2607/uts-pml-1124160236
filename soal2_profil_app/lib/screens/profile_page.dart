@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:soal2_profil_app/widgets/info_tile.dart';
 import 'package:soal2_profil_app/models/profile.dart';
@@ -21,11 +20,11 @@ class _ProfilePageState extends State<ProfilePage> {
     nim: '1124160236',
     kelas: 'TI 24 SE SH',
     prodi: 'Teknik Informatika',
-    bio: 'Saya Seorang Mahasiswa',
-    email: 'mohamadfauzi2607.com',
+    bio: 'Mahasiswa',
+    email: 'mohamadfauzi2607@gmail.com',
     phone: '081316528610',
     github: 'Fauzi2607',
-    photo: 'assets/images/profile.jpg',
+    photo: 'assets/profil',
   );
 
   Future<void> _openEditProfile() async {
@@ -73,9 +72,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: [
                   const CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage(
-                      'assets/images/profile.jpg',
-                    ),
+                    backgroundImage: AssetImage('assets/profil.jpeg'),
                   ),
                   const SizedBox(height: 10),
                   Text(
@@ -110,9 +107,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const AboutPage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const AboutPage()),
                 );
               },
             ),
@@ -171,37 +166,33 @@ class _ProfilePageState extends State<ProfilePage> {
 
                 const SizedBox(height: 12),
 
-                Text(
-                  profile.bio,
-                  textAlign: TextAlign.center,
-                ),
+                Text(profile.bio, textAlign: TextAlign.center),
 
                 const SizedBox(height: 20),
 
                 Card(
-                child: Column(
-                  children: [
-                    InfoTile(
-                      icon: Icons.email_outlined,
-                      label: 'E-mail',
-                      value: profile.email,
-                    ),
-                    const Divider(height: 1),
-                    InfoTile(
-                      icon: Icons.phone,
-                      label: 'Phone Number',
-                      value: profile.phone,
-                    ),
-                    const Divider(height: 1),
-                    InfoTile(
-                      icon: Icons.code,
-                      label: 'Github',
-                      value: profile.github,
-                    ),
-                  ],
+                  child: Column(
+                    children: [
+                      InfoTile(
+                        icon: Icons.email_outlined,
+                        label: 'E-mail',
+                        value: profile.email,
+                      ),
+                      const Divider(height: 1),
+                      InfoTile(
+                        icon: Icons.phone,
+                        label: 'Phone Number',
+                        value: profile.phone,
+                      ),
+                      const Divider(height: 1),
+                      InfoTile(
+                        icon: Icons.code,
+                        label: 'Github',
+                        value: profile.github,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-
               ],
             ),
           ),
