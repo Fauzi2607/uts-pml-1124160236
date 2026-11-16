@@ -24,7 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
     email: 'mohamadfauzi2607@gmail.com',
     phone: '081316528610',
     github: 'Fauzi2607',
-    photo: 'assets/profil',
+    photo: 'assets/profil.jpeg',
   );
 
   Future<void> _openEditProfile() async {
