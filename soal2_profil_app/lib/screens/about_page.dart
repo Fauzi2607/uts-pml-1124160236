@@ -45,13 +45,6 @@ class AboutPage extends StatelessWidget {
 
           const Divider(),
 
-          const Text(
-            'Riwayat Pendidikan',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
 
           const ListTile(
             leading: Icon(Icons.school),
