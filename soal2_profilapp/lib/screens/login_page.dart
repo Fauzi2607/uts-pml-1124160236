@@ -45,8 +45,8 @@ class _LoginPageState extends State<LoginPage> {
         MaterialPageRoute(
           builder: (context) =>
               ProfilePage(onThemeChanged: widget.onThemeChanged),
-        ),
-      );
+       ),
+     );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
